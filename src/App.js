@@ -1,13 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
-    <div className="App">
+    <div className={darkMode ? "App dark" : "App"}>
       {/* Header */}
       <header className="header">
-        <h1>Jeirod</h1>
-        <p>Full Stack Developer</p>
+        <div className="header-column profile-pic">
+          <img src="assets/images/Abogado, Jeirod.webp" alt="Profile" className="profile-pic" />
+        </div>
+
+        <div className="header-column">
+          <h1 className="my-name">Jeirod Taas Abogado</h1>
+          <p className="job-title">Full Stack Developer</p>
+        </div>
+
+        <div className="header-column button-column">
+          <button 
+            className="toggle-btn" 
+            onClick={() => setDarkMode(!darkMode)}
+          >
+            {darkMode ? "🌙" : "☀️"}
+          </button>
+        </div>
       </header>
 
       {/* About Section */}
@@ -37,8 +54,7 @@ function App() {
         <div className="project-card">
           <h3>Portfolio Website</h3>
           <p>
-            A responsive React portfolio showcasing my work and skills, hosted
-            on Vercel.
+            A responsive React portfolio showcasing my work and skills.
           </p>
         </div>
         <div className="project-card">
@@ -60,14 +76,15 @@ function App() {
       {/* Contact Section */}
       <section className="contact">
         <h2>Contact</h2>
-        <p>Email: jeirod@example.com</p>
-        <p>GitHub: <a href="https://github.com/jeirod">github.com/jeirod</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/jeirod">linkedin.com/in/jeirod</a></p>
+        <p>Mobile: +63 956 365 8519</p>
+        <p>Email: jeirodabogado@gmail.com</p>
+        <p>GitHub: <a href="https://github.com/jeirod" target="_blank" rel="noopener noreferrer">github.com/jeirod</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/jeirod-abogado/" target="_blank" rel="noopener noreferrer">linkedin.com/in/jeirod-abogado</a></p>
       </section>
 
       {/* Footer */}
       <footer className="footer">
-        <p>© {new Date().getFullYear()} Jeirod. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Jeirod Taas Abogado. All rights reserved.</p>
       </footer>
     </div>
   );
