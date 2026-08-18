@@ -183,23 +183,23 @@ h2 {
   }
 
   .header .profile-pic img {
-    max-width: 85%;
+    max-width: 50%;
   }
 
   .header .my-name {
-    font-size: 3.5rem;
-  }
-
-  .header .job-title {
-    font-size: 2.5rem;
-  }
-
-  h2 {
     font-size: 3rem;
   }
 
+  .header .job-title {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
   h3 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 
   p, li {
